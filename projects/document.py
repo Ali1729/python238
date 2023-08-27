@@ -36,7 +36,7 @@ def divide_into_days(birth_day, birth_month):
 
 
 def print_to_image(excel_path):
-    df1 = pd.read_excel(excel_path, "TEMPLATESHEET", skiprows =5, nrows =2000, usecols = "A:Z",na_filter=False)
+    df1 = pd.read_excel(excel_path,sheet_name= "TEMPLATESHEET", skiprows =5, nrows =2000, usecols ="A:Z" ,na_filter=False)
     
     list_of_images =[]
     for index, row in df1.iterrows():
@@ -91,7 +91,7 @@ def print_to_image(excel_path):
     im_obj.save("reciepts.pdf",save_all=True,append_images=new_list_images)
 
 
-excel_path = r"C:\\Users\\LENOVO\\Desktop\\Python_235\\08_09_files\\Reciepts_project\\ADMNREGISTER_dummy.xlsx"
+excel_path = r"C:\\Users\\LENOVO\Desktop\\python_238\\projects\\ADMNREGISTER_dummy.xlsx"
 print(excel_path)
 
 
